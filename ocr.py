@@ -1,5 +1,5 @@
 from PIL import Image
-from chars_binary import chars
+from char_lists import chars
 def identify(img):
 	identification_code_temp=[];identification_code=['']*4;diff_min=[144]*4;
 	for i in range (4):
@@ -27,4 +27,4 @@ if __name__=='__main__':
 		img = Image.open('verifycode/'+str(i)+'s.jpeg')
 		img = identificationCodeHandle(img)
 		identification_code = identify(img)
-		print identification_code
+		print(identification_code)
